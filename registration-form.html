@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Clinical Care - Registration</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script defer src="./scripts/functions.js"></script>
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <div id="form">
+            <h1 title="Patient Registration">Clinic Care System</h1>
+            <form class="registration" onsubmit="return false">
+                <fieldset>
+                    <legend><h2>Patient Information</h2></legend>
+                    <!-- <h4>Full Name</h4> -->
+
+                    <div class="name">
+                        <div class="input">
+                            <input
+                                type="text"
+                                name="fname"
+                                autocomplete="off"
+                                required
+                            />
+                            <label for="fname">First Name</label>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="input">
+                            <input
+                                type="text"
+                                name="fname"
+                                autocomplete="off"
+                            />
+                            <label for="fname">Middle Name</label>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="input">
+                            <input
+                                type="text"
+                                name="fname"
+                                autocomplete="off"
+                                required
+                            />
+                            <label for="fname">Last Name</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="input" style="width: 25%">
+                            <input
+                                type="date"
+                                name="dob"
+                                id="dob"
+                                required
+                                onchange="calcAge()"
+                            />
+                            <label for="dob">Date of Birth</label>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="input" style="width: 15%">
+                            <input
+                                type="number"
+                                name="age"
+                                id="age"
+                                disabled
+                                style="height: 67%"
+                            />
+                            <label for="age">Age</label>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="input" >
+                            <div style="
+                                padding:.5rem; 
+                                background-color: #fefefe;
+                                border: 1px solid #fefefe; 
+                                width:max-content;
+                                border-radius: .25rem;
+                                "
+                            >
+                                <input
+                                    type="radio"
+                                    name="sex"
+                                    id="male"
+                                    value="Male"
+                                    style="min-width: max-content"
+                                />
+                                <label
+                                    for="male"
+                                    style="margin-left: 0; font-size: 0.875rem"
+                                    >Male</label
+                                >
+                                <input
+                                    type="radio"
+                                    name="sex"
+                                    id="female"
+                                    value="Female"
+                                    style="min-width: max-content"
+                                />
+                                <label
+                                    for="female"
+                                    style="margin-left: 0; font-size: 0.875rem"
+                                    >Female</label
+                                >
+                            </div>
+                            <label for="sex">Gender</label>
+                        </div>
+                    </div>
+
+                    <h3>Contact Details</h3>
+                    <div class="address">
+                        <div class="input">
+                            <input type="text" name="address" required />
+                            <label for="address">Current Address</label>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="input">
+                            <input
+                                type="tel"
+                                name="phone"
+                                pattern="[0-9]{10,13}"
+                                maxlength="13"
+                                required
+                            />
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="input">
+                            <input type="email" name="email" />
+                            <label for="email">Active Email Address</label>
+                        </div>
+                    </div>
+                    <h3>Emergency Contact Person</h3>
+                    <div class="e-contact">
+                        <div class="input">
+                            <input type="text" name="e-name" required />
+                            <label for="e-name">Full Name</label>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="input">
+                            <input
+                                type="tel"
+                                name="phone"
+                                pattern="[0-9]{10,13}"
+                                maxlength="13"
+                                required
+                            />
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="input">
+                            <input type="email" name="email" />
+                            <label for="email">Active Email Address</label>
+                        </div>
+                    </div>
+                    <h3>Medical History</h3>
+                    <div
+                        class="history"
+                        style="display: flex; flex-direction: column"
+                    >
+                        <p>
+                            Did the patient have any of the following
+                            conditions? Check all that apply.
+                        </p>
+                        <div class="options">
+                            <div>
+                                <div class="opt">
+                                    <input type="checkbox" name="o1" id="o1" />
+                                    <label for="o1">Arthritis</label>
+                                </div>
+                                <div class="opt">
+                                    <input type="checkbox" name="o2" id="o2" />
+                                    <label for="o2">Asthma</label>
+                                </div>
+                                <div class="opt">
+                                    <input type="checkbox" name="o4" id="o3" />
+                                    <label for="o3">Cancer</label>
+                                </div>
+                                <div class="opt">
+                                    <input type="checkbox" name="o4" id="o4" />
+                                    <label for="o4">Bronchitis</label>
+                                </div>
+                                <div class="opt">
+                                    <input type="checkbox" name="o5" id="o5" />
+                                    <label for="o5">Kidney&nbsp;Disease</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="opt">
+                                    <input
+                                        type="checkbox"
+                                        name="o11"
+                                        id="o11"
+                                    />
+                                    <label for="o11">Heart&nbsp;Disease</label>
+                                </div>
+                                <div class="opt">
+                                    <input
+                                        type="checkbox"
+                                        name="o12"
+                                        id="o12"
+                                    />
+                                    <label for="o12">Diabetes</label>
+                                </div>
+                                <div class="opt">
+                                    <input
+                                        type="checkbox"
+                                        name="o13"
+                                        id="o13"
+                                    />
+                                    <label for="o13">Epilepsy</label>
+                                </div>
+                                <div class="opt">
+                                    <input
+                                        type="checkbox"
+                                        name="o14"
+                                        id="o14"
+                                    />
+                                    <label for="o14">High Cholesterol</label>
+                                </div>
+                                <div class="opt">
+                                    <input
+                                        type="checkbox"
+                                        name="o15"
+                                        id="o15"
+                                    />
+                                    <label for="o15">Hypertension</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="opt">
+                                    <input type="checkbox" name="o6" id="o6" />
+                                    <label for="o6">Osteoporosis</label>
+                                </div>
+                                <div class="opt">
+                                    <input type="checkbox" name="o7" id="o7" />
+                                    <label for="o7">Parkinson’s Disease</label>
+                                </div>
+                                <div class="opt">
+                                    <input type="checkbox" name="o8" id="o8" />
+                                    <label for="o8">Stroke</label>
+                                </div>
+                                <div class="opt">
+                                    <input type="checkbox" name="o9" id="o9" />
+                                    <label for="o9">Mental Illness</label>
+                                </div>
+                                <div class="opt">
+                                    <input
+                                        type="checkbox"
+                                        name="o10"
+                                        id="o10"
+                                    />
+                                    <label for="o10">Others</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                        <div class="symptoms">
+                            <label for="symptoms">Current Symptoms:</label>
+                            <select name="symptoms" id="symptoms" multiple>
+                                <option value="General">General</option>
+                                <option value="Cardiovascular">Cardiovascular</option>
+                                <option value="Ear, Nose and Throat">Ear, Nose and Throat</option>
+                                <option value="Gastrointestinal">Gastrointestinal</option>
+                                <option value="Integumentary">Integumentary</option>
+                                <option value="Neurological">Neurological</option>
+                                <option value="Obstetric / Gynaecological">Obstetric / Gynaecological</option>
+                                <option value="Ocular">Ocular</option>
+                                <option value="Psychiatric">Psychiatric</option>
+                                <option value="Pulmonary">Pulmonary</option>
+                                <option value="Rheumatologic">Rheumatologic</option>
+                                <option value="Urologic">Urologic</option>
+                            </select>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="radio">
+                            <p>Is the patient currently taking medication?</p>
+                            <input
+                                type="radio"
+                                name="question"
+                                id="yes"
+                                onclick="toggleDisabled()"
+                            /><label for="yes">Yes</label>
+                            <br />
+                            <input
+                                type="radio"
+                                name="question"
+                                id="no"
+                                onclick="toggleDisabled()"
+                            /><label for="no">No</label> <br /><br />
+                            <input
+                                type="text"
+                                name="med"
+                                id="med"
+                                placeholder=""
+                                disabled
+                            />
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="buttons">
+                    <input type="reset" value="Reset" />
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <script>
+            document.getElementById("dob").max = new Date().toLocaleDateString(
+                "en-ca"
+            );
+        </script>
+    </body>
+</html>

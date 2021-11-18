@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clinical Care - Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./scripts/functions.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1 title="Login">Clinic Care System</h1>
+    <form
+            name="login-form"
+            method="get"
+            action="registration-form.html"
+            onsubmit="return validateForm()"
+            class="login"
+        >
+            <h2>Admin Login</h2>
+            <div class="input">
+                <input type="text" name="username" id="username" autocomplete="off"required/>
+                <label for="username">Username</label>
+            </div>
+            <div class="input">
+                <input type="password" name="password" id="password" required/>
+                <label for="password">Password</label>
+            </div>
+            <div class="login-btn">
+                <a href="#" onclick="alert('Contact Admin Support. Dial *4337')">Forgot Password?</a>
+                <input type="submit" value="Login" />
+            </div>
+        </form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "liveSassCompile.settings.formats": [
+    
+        {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "./registration-form/css"
+    }],
+    "liveSassCompile.settings.generateMap": false,
+}
