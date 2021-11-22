@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-$font: 'Montserrat', sans-serif;
+$font: "Montserrat", sans-serif;
 $color-primary: #4caf50;
 $color-primary-1: #389b3c;
 $color-text-dark: #324132;
@@ -42,6 +42,8 @@ body {
     }
 }
 
+
+
 form.login {
     width: 24rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -81,7 +83,7 @@ form.login {
             align-self: stretch;
             color: #333;
             border: 1px solid $gray;
-            border-radius: .25rem;
+            border-radius: 0.25rem;
             /* width: 100%; */
         }
     }
@@ -92,7 +94,6 @@ form.login {
         width: 85%;
         margin-bottom: 1.5rem;
 
-        
         input[type="submit"] {
             background-color: $color-primary;
             color: #f1f1f1;
@@ -102,8 +103,8 @@ form.login {
             width: max-content;
             text-transform: uppercase;
             cursor: pointer;
-            transition: .15s;
-            border-radius: .25rem;
+            transition: 0.15s;
+            border-radius: 0.25rem;
 
             &:hover {
                 background-color: $color-primary-1;
@@ -113,16 +114,15 @@ form.login {
             border: 0;
             background-color: $white;
             color: $color-text-dark;
-            padding: 0 .5rem;
+            padding: 0 0.5rem;
             cursor: pointer;
             text-decoration: none;
-            font-size: .875rem;
+            font-size: 0.875rem;
 
             &:hover {
                 color: $color-button;
             }
         }
-        
     }
 }
 
@@ -133,19 +133,20 @@ form.registration {
     margin: 2rem auto;
     padding: 0 1rem;
     width: 100%;
-    background-color: rgb(243, 243, 243);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 
     fieldset {
+        background-color: rgb(243, 243, 243);
         border: 2px solid $color-primary;
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         display: flex;
         max-width: 100%;
         flex-direction: column;
         justify-content: stretch;
         padding-bottom: 2rem;
 
-        h2, h3 {
+        h2,
+        h3 {
             font-weight: 500;
             color: $color-text-dark;
         }
@@ -153,28 +154,28 @@ form.registration {
             margin-bottom: 1rem;
             margin-top: 2rem;
             font-weight: 00;
-            padding-left: .5rem;
+            padding-left: 0.5rem;
             width: max-content;
             position: relative;
             color: $white;
             isolation: isolate;
 
             &::before {
-                content: ' ';
+                content: " ";
                 height: calc(100% + 1rem);
                 width: calc(100% + 2.5rem);
                 background-color: $color-primary;
                 position: absolute;
-                left: -.875rem;
-                top: -.5rem;
+                left: -0.875rem;
+                top: -0.5rem;
                 border-radius: 0 2rem 2rem 0;
                 z-index: -1;
             }
         }
         p {
-            font-size: .875rem;
+            font-size: 0.875rem;
             color: $color-text-dark;
-            margin: .75rem 0 .5rem 0;
+            margin: 0.75rem 0 0.5rem 0;
         }
 
         .divider {
@@ -185,24 +186,24 @@ form.registration {
         input:not(input[type="checkbox"]) {
             min-width: 100%;
             max-width: 100%;
-            padding: .5rem .75rem;
+            padding: 0.5rem 0.75rem;
             color: $color-text-dark;
             border: 1px solid $gray;
-            border-radius: .25rem;
-            font-size: .875rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
             font-weight: 500;
             // text-transform: uppercase;
         }
         label {
-            font-size: .75rem;
+            font-size: 0.75rem;
             color: $color-text-light;
-            margin: 0 .5rem;
+            margin: 0 0.5rem;
             font-weight: 600;
         }
 
         & > div {
             display: flex;
-            margin: .75rem .5rem .25rem .5rem;
+            margin: 0.75rem 0.5rem 0.25rem 0.5rem;
 
             .input {
                 width: 100%;
@@ -222,12 +223,14 @@ form.registration {
                 margin-left: 1rem;
 
                 input[type="checkbox"] {
-                    margin: .375rem .5rem .375rem 0;
+                    margin: 0.375rem 0.5rem 0.375rem 0;
                 }
                 label {
-                    font-size: .875rem;
-                    margin: .25rem 0;
+                    font-size: 0.875rem;
+                    margin: 0.25rem 0;
                     padding: 0;
+                    
+                    
                 }
             }
         }
@@ -239,18 +242,18 @@ form.registration {
         display: flex;
         justify-content: right;
 
-        input{
+        input, #show-data {
             border: none;
             outline: none;
-            padding: .75rem 1.5rem;
-            font-size: .875rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.875rem;
             margin: 1rem;
             margin-left: 1rem;
             text-transform: uppercase;
             cursor: pointer;
             font-weight: 600;
-            border-radius: .25rem;
-            letter-spacing: .0625rem;
+            border-radius: 0.25rem;
+            letter-spacing: 0.0625rem;
         }
         input[value="Submit"] {
             background-color: $color-primary;
@@ -265,7 +268,7 @@ form.registration {
             color: $white;
 
             &:hover {
-                filter: brightness(.9)
+                filter: brightness(0.9);
             }
         }
     }

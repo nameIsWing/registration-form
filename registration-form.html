@@ -11,7 +11,7 @@
     <body>
         <div id="form">
             <h1 title="Patient Registration">Clinic Care System</h1>
-            <form class="registration" onsubmit="return false">
+            <form class="registration" onsubmit="return false" name="registration">
                 <fieldset>
                     <legend><h2>Patient Information</h2></legend>
                     <!-- <h4>Full Name</h4> -->
@@ -24,26 +24,26 @@
                                 autocomplete="off"
                                 required
                             />
-                            <label for="fname">First Name</label>
+                            <label for="fname">First Name *</label>
                         </div>
                         <div class="divider"></div>
                         <div class="input">
                             <input
                                 type="text"
-                                name="fname"
+                                name="mname"
                                 autocomplete="off"
                             />
-                            <label for="fname">Middle Name</label>
+                            <label for="mname">Middle Name</label>
                         </div>
                         <div class="divider"></div>
                         <div class="input">
                             <input
                                 type="text"
-                                name="fname"
+                                name="lname"
                                 autocomplete="off"
                                 required
                             />
-                            <label for="fname">Last Name</label>
+                            <label for="lname">Last Name *</label>
                         </div>
                     </div>
                     <div>
@@ -55,7 +55,7 @@
                                 required
                                 onchange="calcAge()"
                             />
-                            <label for="dob">Date of Birth</label>
+                            <label for="dob">Date of Birth *</label>
                         </div>
                         <div class="divider"></div>
                         <div class="input" style="width: 15%">
@@ -111,7 +111,7 @@
                     <div class="address">
                         <div class="input">
                             <input type="text" name="address" required />
-                            <label for="address">Current Address</label>
+                            <label for="address">Current Address *</label>
                         </div>
                     </div>
                     <div class="contact">
@@ -123,7 +123,7 @@
                                 maxlength="13"
                                 required
                             />
-                            <label for="phone">Phone Number</label>
+                            <label for="phone">Phone Number *</label>
                         </div>
                         <div class="divider"></div>
                         <div class="input">
@@ -135,23 +135,23 @@
                     <div class="e-contact">
                         <div class="input">
                             <input type="text" name="e-name" required />
-                            <label for="e-name">Full Name</label>
+                            <label for="e-name">Full Name *</label>
                         </div>
                         <div class="divider"></div>
                         <div class="input">
                             <input
                                 type="tel"
-                                name="phone"
+                                name="e-phone"
                                 pattern="[0-9]{10,13}"
                                 maxlength="13"
                                 required
                             />
-                            <label for="phone">Phone Number</label>
+                            <label for="e-phone">Phone Number *</label>
                         </div>
                         <div class="divider"></div>
                         <div class="input">
-                            <input type="email" name="email" />
-                            <label for="email">Active Email Address</label>
+                            <input type="email" name="e-email" />
+                            <label for="e-email">Active Email Address</label>
                         </div>
                     </div>
                     <h3>Medical History</h3>
@@ -166,23 +166,23 @@
                         <div class="options">
                             <div>
                                 <div class="opt">
-                                    <input type="checkbox" name="o1" id="o1" />
+                                    <input type="checkbox" name="option-box" id="o1" />
                                     <label for="o1">Arthritis</label>
                                 </div>
                                 <div class="opt">
-                                    <input type="checkbox" name="o2" id="o2" />
+                                    <input type="checkbox" name="option-box" id="o2" />
                                     <label for="o2">Asthma</label>
                                 </div>
                                 <div class="opt">
-                                    <input type="checkbox" name="o4" id="o3" />
+                                    <input type="checkbox" name="option-box" id="o3" />
                                     <label for="o3">Cancer</label>
                                 </div>
                                 <div class="opt">
-                                    <input type="checkbox" name="o4" id="o4" />
+                                    <input type="checkbox" name="option-box" id="o4" />
                                     <label for="o4">Bronchitis</label>
                                 </div>
                                 <div class="opt">
-                                    <input type="checkbox" name="o5" id="o5" />
+                                    <input type="checkbox" name="option-box" id="o5" />
                                     <label for="o5">Kidney&nbsp;Disease</label>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                                 <div class="opt">
                                     <input
                                         type="checkbox"
-                                        name="o11"
+                                        name="option-box"
                                         id="o11"
                                     />
                                     <label for="o11">Heart&nbsp;Disease</label>
@@ -198,7 +198,7 @@
                                 <div class="opt">
                                     <input
                                         type="checkbox"
-                                        name="o12"
+                                        name="option-box"
                                         id="o12"
                                     />
                                     <label for="o12">Diabetes</label>
@@ -206,7 +206,7 @@
                                 <div class="opt">
                                     <input
                                         type="checkbox"
-                                        name="o13"
+                                        name="option-box"
                                         id="o13"
                                     />
                                     <label for="o13">Epilepsy</label>
@@ -214,7 +214,7 @@
                                 <div class="opt">
                                     <input
                                         type="checkbox"
-                                        name="o14"
+                                        name="option-box"
                                         id="o14"
                                     />
                                     <label for="o14">High Cholesterol</label>
@@ -222,7 +222,7 @@
                                 <div class="opt">
                                     <input
                                         type="checkbox"
-                                        name="o15"
+                                        name="option-box"
                                         id="o15"
                                     />
                                     <label for="o15">Hypertension</label>
@@ -230,25 +230,25 @@
                             </div>
                             <div>
                                 <div class="opt">
-                                    <input type="checkbox" name="o6" id="o6" />
+                                    <input type="checkbox" name="option-box" id="o6" />
                                     <label for="o6">Osteoporosis</label>
                                 </div>
                                 <div class="opt">
-                                    <input type="checkbox" name="o7" id="o7" />
+                                    <input type="checkbox" name="option-box" id="o7" />
                                     <label for="o7">Parkinson’s Disease</label>
                                 </div>
                                 <div class="opt">
-                                    <input type="checkbox" name="o8" id="o8" />
+                                    <input type="checkbox" name="option-box" id="o8"/>
                                     <label for="o8">Stroke</label>
                                 </div>
                                 <div class="opt">
-                                    <input type="checkbox" name="o9" id="o9" />
+                                    <input type="checkbox" name="option-box" id="o9"/>
                                     <label for="o9">Mental Illness</label>
                                 </div>
                                 <div class="opt">
                                     <input
                                         type="checkbox"
-                                        name="o10"
+                                        name="option-box"
                                         id="o10"
                                     />
                                     <label for="o10">Others</label>
@@ -301,6 +301,26 @@
                     </div>
                 </fieldset>
                 <div class="buttons">
+                    <a 
+                        href="./patient-data.html"
+                        target="_blank"
+                        style="
+                            color: #389b3c;
+                            border: 2px solid #389b3c;
+                            padding: 0.75rem 1.5rem;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            border-radius: 0.25rem;
+                            letter-spacing: 0.0625rem;
+                            margin: 1rem;
+                            margin-right: auto; 
+                            cursor: pointer;
+                            text-decoration: none;
+                        "
+                        id="show-data"
+                    >
+                        Show All Data
+                    </a>
                     <input type="reset" value="Reset" />
                     <input type="submit" value="Submit" />
                 </div>

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+h2, h3, h4 {
+    font-weight: 500;
+    color: #389b3c;
+}
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #324132
+}
+b {
+    font-weight: 500;
+}
+#data-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.patient {
+    max-width: 64rem;
+    min-width:max-content;
+    margin-bottom: 3rem;
+    margin-right: 2rem;
+    box-shadow: 0 .25rem .5rem rgba(0,0,0,0.2);
+    padding: 2rem 4rem;
+    border-radius: .5rem;
+    color: #324132;
+}
+.patient > div {
+    margin-bottom: 2rem;
+}
+.patient > div > div {
+    margin-left: 1rem;
+    /* font-size: .875rem; */
+}
+.info-1 > * {
+    display: inline-block;
+}
+.info-2 > div, .info-3 > div {
+    margin-bottom: 1rem;
+}
